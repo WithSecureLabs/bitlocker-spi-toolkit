@@ -1,0 +1,13 @@
+{
+  "name": "TPM SPI Transaction",
+  "apiVersion": "1.0.0",
+  "author": "Henri Nurmi",
+  "version": "0.0.1",
+  "description": "Parses TPM transactions from SPI bus. Defined in https://trustedcomputinggroup.org/wp-content/uploads/PC-Client-Specific-Platform-TPM-Profile-for-TPM-2p0-v1p05p_r14_pub.pdf",
+  "extensions": {
+    "TPM SPI": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "HighLevelAnalyzer.Hla"
+    }
+  }
+}

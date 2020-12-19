@@ -1,0 +1,13 @@
+{
+  "name": "BitLocker Key Extractor",
+  "apiVersion": "1.0.0",
+  "author": "Henri Nurmi",
+  "version": "0.0.1",
+  "description": "Extracts BitLocker key from the SPI bus",
+  "extensions": {
+    "BitLocker Key Extractor": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "HighLevelAnalyzer.Hla"
+    }
+  }
+}
