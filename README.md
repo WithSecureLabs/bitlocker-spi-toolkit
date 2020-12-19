@@ -7,6 +7,9 @@ Extract BitLocker's volume master key (VMK) from an SPI bus. This repository con
 
 In addition, this toolkit includes a Docker container, which can be used to decrypt and mount the drive. For more information, read the following blog post.
 
+![Extracted BitLocker key](https://raw.githubusercontent.com/FSecureLABS/bitlocker-spi-toolkit/main/doc/extracted-key.png)
+![Mounted drive](https://raw.githubusercontent.com/FSecureLABS/bitlocker-spi-toolkit/main/doc/auto-mount.png)
+
 ## Installation
 
 1. Install the High-Level analyzers by selecting `Load Existing Extension` from Logic 2's extensions tab.
