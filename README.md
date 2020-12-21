@@ -5,7 +5,7 @@ Extract BitLocker's volume master key (VMK) from an SPI bus. This repository con
 - BitLocker-Key-Extractor:  Extracting BitLocker keys from the SPI bus.
 - TPM-SPI-Transaction: Decoding TPM SPI transactions from the SPI bus. This extension is not required but is a handy tool for TPM transactions.
 
-In addition, this toolkit includes a Docker container, which can be used to decrypt and mount the drive. For more information, read the following blog post.
+In addition, this toolkit includes a Docker container, which can be used to decrypt and mount the drive. For more information, read the following blog [post](https://labs.f-secure.com/blog/sniff-there-leaks-my-bitlocker-key/).
 
 ![Extracted BitLocker key](https://raw.githubusercontent.com/FSecureLABS/bitlocker-spi-toolkit/main/doc/extracted-key.png)
 ![Mounted drive](https://raw.githubusercontent.com/FSecureLABS/bitlocker-spi-toolkit/main/doc/auto-mount.png)
