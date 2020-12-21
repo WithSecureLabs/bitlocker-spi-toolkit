@@ -40,7 +40,7 @@ class Transaction:
         start_time: A timestamp when the first byte in this transatcion captured.
         end_time: A timestamp when the last byte in this transatcion captured.
         operation (Operation): Transaction type.
-        address (bytearray): The target address in the transatcion. (little-endian).
+        address (bytearray): The target address in the transatcion. (big-endian).
         data (bytearray): The data in the transatcion.
         size (int): The number of data bytes.
         wait_count (int): Holds the number of wait states between the address and data .
