@@ -6,4 +6,4 @@ docker run --rm -it \
     --security-opt apparmor:unconfined \
     --device /dev/fuse \
     --device $DEVICE:/dev/bitlocker \
-    bitlocker-spi-toolkit:v1 $KEY
+    bitlocker-spi-toolkit:latest $KEY
