@@ -10,6 +10,10 @@ from saleae.analyzers import HighLevelAnalyzer, AnalyzerFrame
 OPERATION_MASK = 0x80
 ADDRESS_MASK = 0x3f
 WAIT_MASK = 0xfe
+"""If your MISO transition is early in the transaction, i.e your first TPM response 
+byte is 0x80, consider changing the WAIT_MASK to 0x00
+"""
+# WAIT_MASK = 0x00
 WAIT_END = 0x01
 TPM_DATA_FIFO_0 = 0xd40024
 
@@ -162,7 +166,7 @@ class Hla(HighLevelAnalyzer):
     def _find_key(self):
         data = self.window.hex()
         key = re.findall(
-            r'2c00000001000[0-1]000[0-5]200000(\w{64})', data)
+            r'2c000[0-6]000[1-9]000[0-1]000[0-5]200000(\w{64})', data)
         if key:
             return key[0]
         return None
