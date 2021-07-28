@@ -30,6 +30,6 @@ In addition, this toolkit includes a Docker container, which can be used to decr
 **Note for macOS users**: It [is not possible](https://github.com/docker/for-mac/issues/3110) to share Mac host devices with the container. So therefore, you have to do this manually:
 
 1. Capture the VMK, as shown above.
-2. Build and install the latest version of [Dislcoker](https://github.com/Aorimn/dislocker). 
+2. Build and install the latest version of [Dislocker](https://github.com/Aorimn/dislocker). 
 3. Decrypt and mount the volume: `./run.sh <VMK> /dev/sdXX`
 
