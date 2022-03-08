@@ -10,11 +10,7 @@ from registry import fifo
 
 OPERATION_MASK = 0x80
 ADDRESS_MASK = 0x3f
-WAIT_MASK = 0xfe
-"""If your MISO transition is early in the transaction, i.e your first TPM response 
-byte is 0x80, consider changing the WAIT_MASK to 0x00
-"""
-# WAIT_MASK = 0x00
+WAIT_MASK = 0x01
 WAIT_END = 0x01
 
 
@@ -163,7 +159,7 @@ class Hla(HighLevelAnalyzer):
     def _read_address_state(self, mosi, miso, frame):
         self.current_transaction.address += mosi.to_bytes(1, byteorder='big')
         address_complete = self.current_transaction.is_address_complete()
-        if address_complete and miso == WAIT_MASK:
+        if address_complete and not miso & WAIT_MASK:
             self.state = TransactionState.WAIT
         elif address_complete:
             self.state = TransactionState.TRANSFER_BYTE
